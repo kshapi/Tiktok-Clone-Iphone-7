@@ -1,0 +1,359 @@
+:root {
+  --text: white;
+  --bg: black;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #D6D6D6;
+  color: #fff;
+}
+.iphone {
+  width: 310px;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 30px;
+  box-shadow: 1px 1px 5px -1px rgba(255,255,255, 0.50),
+  -1px -1px 5px -1px rgba(255,255,255, 0.30),
+  1px 15px 10px 0px rgba(0,0,0, 0.20),
+  inset 1px 1px 10px rgba(0,0, 0,0.40),
+  inset -1px -10px 10px rgba(0, 0, 0, 0.10);
+  position: relative;
+}
+.screen {
+  width: 95%;
+  height: 80%;
+  background: #5A604F;
+  position: relative;
+  bottom: 8px;
+  overflow: hidden;
+  border-radius: 5px;
+}
+.top {
+  height: 4px;
+  width: 60px;
+  background: #000;
+  position: absolute;
+  top: 35px;
+  border-radius: 5px;
+}
+.top::after {
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: black;
+  position: absolute;
+  top: -16px;
+  left: 27px;
+  border-radius: 5px;
+}
+.top::before {
+  content: "";
+  height: 11px;
+  width: 11px;
+  background: black;
+  position: absolute;
+  left: -30px;
+  top: -5px;
+  border-radius: 5px;
+}
+.btn {
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 15px;
+  box-shadow: 1px 1px 5px -1px rgba(255,255, 255, 0.40),
+  -1px -1px 2px 0.6px rgba(0,0,0,0.30);
+  transform: rotate(25deg);
+}
+.screen header {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 15px;
+  position: absolute;
+  top: 0;
+  z-index: 110;
+}
+.screen header .live {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: -5px;
+}
+.screen header .bi-search {
+  font-size: 22px;
+  color: var(--text);
+  margin-right: 40px;
+}
+.screen header .follow {
+  display: flex;
+  justify-content: space-between;
+  color: var(--text);
+  font-weight: 600;
+  position: relative;
+  right: 10px;
+  font-size: 15px;
+}
+header .follow :nth-child(1){
+  margin-right: 10px;
+  color: #9DA297;
+}
+header .follow .foryou {
+  position: relative;
+}
+header .follow .foryou::after {
+  content: "";
+  height: 3px;
+  width: 25px;
+  background: white;
+  position: absolute;
+  bottom: -8px;
+  right: 14px;
+  border-radius: 5px;
+}
+.screen section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: 91.5%;
+  background: var(--bg);
+  overflow: hidden;
+  user-select: none;
+}
+section .content {
+  height: 100%;
+  width: 100%;
+}
+section .content .vid {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+section .content video {
+  height: 560px;
+  width: 100%;
+}
+section .content .options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: fit-content;
+  width: 50px;
+  position: absolute;
+  bottom: 18px;
+  right: 10px;
+  overflow: hidden;
+}
+.content .options .profile {
+  width: 84%;
+  height: 42px;
+  border: 1.5px solid white;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 13px;
+  position: relative;
+}
+.options .icon {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.options .icon i {
+  margin-top: 7px;
+  font-size: 25px;
+  color: var(--text);
+  transition: 0.2s;
+}
+.options span {
+  color: var(--text);
+   font-size: 8px;
+   font-weight: 600;
+   margin-top: 3px;
+}
+.options .song {
+  height: 40px;
+  width: 80%;
+  background: #6E7B52;
+  margin-top: 7px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 10px solid rgba(0, 0, 0, 0.50);
+}
+.content .user {
+  display: flex;
+  flex-direction: column;
+  color: var(--text);
+  position: absolute;
+  bottom: 15px;
+  left: 5px;
+  padding: 5px;
+}
+.content .user .name {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  margin-bottom: 2px;
+}
+.content .user .name .tick {
+  height: 27px;
+  width: 19px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0px 0px 0px 2px;
+}
+.content .user .name span {
+  font-size: 13px;
+  margin-left: 5px;
+  color: rgba(255,255,255, 0.70);
+}
+.screen footer {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: var(--bg);
+  position: absolute;
+  bottom: 0px;
+}
+footer div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+footer div span {
+  font-size: 10px;
+  color: var(--text)
+}
+footer div i {
+  font-size: 19px;
+  color: var(--text);
+}
+footer .uplaod {
+  height: 27px;
+  width: 30px;
+  position: relative;
+  top: -2px;
+  background: white;
+  border-radius: 2px;
+}
+footer .uplaod :nth-child(1) {
+  height: 100%;
+  width: 5px;
+  background: #35CDED;
+  position: absolute;
+  left: -3px;
+  border-radius: 7px 0px 0px 7px;
+}
+footer .uplaod :nth-child(2) {
+  color: black;
+}
+footer .uplaod :nth-child(3) {
+  height: 100%;
+  width: 5px;
+  background: #CE3939;
+  position: absolute;
+  right: -3px;
+  border-radius: 0px 7px 7px 0px;
+}
+section img {
+  height: 100%;
+  width: 100%;
+}
+.play-btn {
+  position: absolute;
+  z-index: 10000;
+  top: 45%;
+  left: 45%;
+}
+.play-btn i {
+  font-size: 40px;
+  color: var(--text);
+  animation: tik 0.2s linear forwards;
+}
+@keyframes tik {
+  0%{
+    transform: scale(1.5);
+    opacity: 0.5;
+  }
+  30%{
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+#taptolike {
+  font-size: 70px;
+  color: #CF3C3C;
+  position: absolute;
+  animation: like 1s linear forwards;
+}
+
+@keyframes like {
+  0%{
+    opacity: 1;
+    transform: scale(1.4);
+  }25%{
+    opacity: 0.5;
+    transform: scale(1);
+  }80%{
+    opacity: 0.1;
+    }100%{
+    opacity: 0;
+  }
+}
+.song.active {
+  animation: song 5s linear infinite;
+}
+@keyframes song {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+.content .range {
+  width: 100%;
+  position: absolute;
+  bottom: 6px;
+  z-index: 100;
+}
+.range input {
+  appearance: none;
+  width: 100%;
+  height: 2px;
+  border-radius: 2px;
+ background: gray;
+}
+.range input::-webkit-slider-thumb{
+  appearance: none;
+  width: 6px;
+  height: 6px;
+  border-radius: 5px;
+  background: white;
+}
